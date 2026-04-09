@@ -1,39 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 body {
-    background: #f3efe6;
+    background: #f5ecd9;
 }
 
-.hero-custom {
-    background: #f3efe6;
-    padding: 3rem 1.5rem;
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.title-green {
-    color: #2f6b3f;
+.menu {
+    font-size: 28px;
+    cursor: pointer;
 }
 
-.btn-green {
-    background: #7cc36b;
+span img .user {
+    height: 20px;
+    width: auto;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    background: #7bbf6a;
     color: white;
 }
 
-.card-custom {
+/* HERO */
+.hero {
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    max-width: 500px;
+}
+
+.text h1 {
+    font-size: 48px;
+    color: #3e6b4f;
+}
+
+.text h3 {
+    margin: 10px 0;
+    color: #5c8d6a;
+}
+
+.text p {
+    margin: 20px 0;
+    color: #6d8c76;
+}
+
+.text button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #7bbf6a;
+    color: white;
+    cursor: pointer;
+}
+
+/* IMAGEM */
+.image img {
+    width: 250px;
+}
+
+/* BOTÃO CENTRAL */
+.scroll {
+    width: 60px;
+    height: 60px;
+    background: #7bbf6a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+/* CARDS */
+.cards {
+    width: 100%;
+    padding: 40px 60px;
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 25px;
     border-radius: 15px;
-    padding: 1.5rem;
+    color: white;
+    transition: 0.3s;
 }
 
-.card-green {
-    background: #7cc36b;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.card-blue {
-    background: #7fa8d8;
+.card a {
+    display: block;
+    margin-top: 10px;
+    color: white;
 }
 
-.card-red {
-    background: #e57373;
+/* CORES */
+.green {
+    background: #69c37d;
 }
 
-.card-brown {
+.blue {
+    background: #5da3d9;
+}
+
+.red {
+    background: #e46363;
+}
+
+.brown {
     background: #a67c52;
 }
-
