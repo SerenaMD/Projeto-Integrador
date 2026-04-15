@@ -14,7 +14,7 @@
     <section class="hero hero-custom">
         <div class="hero-body">
             <div class="columns is-vcentered">
-                <h1>BEATRIZ MEXEU AQUI</h1>
+
 
                 <!-- TEXTO -->
                 <div class="column">
@@ -40,13 +40,14 @@
             <div class="columns">
 
                 <div class="column">
-                    <div class="card-custom card-green">
+                    <div class="card-custom card-green" onclick="openModal('vidro')">
 
                         <h3 class="title is-5">Vidro</h3>
-                        <p>Plant Care Essentials</p>
+                        <p>Frascos,garrafas,potes.</p>
                         <div class="img">
                             <img src="/img/iconLixoVerde.png" alt="">
                         </div>
+                        <button class="button is-fullwidth mt-3" onclick="openModal('vidro')">Saiba Mais</button>
 
                     </div>
                 </div>
@@ -54,37 +55,110 @@
                 <div class="column">
                     <div class="card-custom card-blue">
                         <h3 class="title is-5">Papel</h3>
-                        <p>Plant Care Essentials</p>
+                        <p>Jornais,Papelão,cadernos.</p>
                         <div class="img">
                             <img src="/img/iconLixoAzul.png" alt="">
                         </div>
+                        <button class="button is-fullwidth mt-3" onclick="openModal('papel')">Saiba Mais </button>
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="card-custom card-red">
                         <h3 class="title is-5">Plástico</h3>
-                        <p>Plant Care Essentials</p>
+                        <p>Garrafas PET,embalagens.</p>
                         <div class="img">
                             <img src="/img/IconLixoVermelho.png" alt="">
                         </div>
+                        <button class="button is-fullwidth mt-3" onclick="openModal('plastico')">Saiba Mais</button>
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="card-custom card-brown">
                         <h3 class="title is-5">Orgânico</h3>
-                        <p>Plant Care Essentials</p>
+                        <p>Cascas,Restos de comida.</p>
                         <div class="img">
                             <img src="/img/iconLixoMarrom.png" alt="">
                         </div>
-                       <button class="button is-fullwidth">Normal</button>
+                        <button class="button is-fullwidth mt-3" onclick="openModal('organico')">Saiba Mais</button>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+
+    <!--MODAL -->
+    <div id="modalInfo" class="modal">
+        <div class="modal-background" onclick="closeModal()"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modalTitle">Guia de Reciclagem</p>
+                <button class="delete" onclick="closeModal()"></button>
+            </header>
+            <section class="modal-card-body" id="modalContent">
+
+                <!--conteúdo aparece aqui-->
+
+             
+
+
+
+
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        function openModal(tipo) {
+            const modal = document.getElementById('modalInfo');
+            const content = document.getElementById('modalContent');
+            const title = document.getElementById('modalTitle');
+
+            const guias = {
+                vidro: '<h4>Vidro</h4><p><strong>O que é Aceito(Sim):</strong><ul><li>Frascos de perfume e cosméticos</li><li>Garrafas de bebidas(cerveja,vinho,refrigerante)</li><li>Potes de geleia,conservas e alimentos</li><li>Vidros verdes, marrons e transparentes</li></ul><hr><strong>O que não é Aceito(Não):</strong><ul><li>Espelhos e vidros temperados</li><li>Porcelana, cerâmica e cristal</li><li>Ampolas de medicamento</li><li>Vidro laminado (para-brisa)</li></ul><hr><strong>Dicas de Preparo:</strong><ul><li>Lavar com água e sabão ,enxaguar bem</li><li>Remover rótulos,tampas e anéis de borracha</li><li>Quebrar os vidros em pedaços grandes (mão protegida)</li><li><strong>NÃO</strong> precisa secar completamente o vidro</li><hr><li> Onde Descartar </li> ',
+
+                papel: '<h4>Papel</h4><p><strong>O que é Aceito(Sim):</strong><ul><li>Jornais e revistas</li><li>Papelão e caixas de delivery</li><li>Cadernos e folhas sulfite</li><li>Papel de escritório (sem grampos)</li></ul><hr><strong>O que não é Aceito(Não):</strong><ul><li>Papel plastificado ou metalizado</li><li>Guardanapos e papéis sujos de comida</li><li>Papéis carbono e térmicos</li><li>Fitas adesivas e etiquetas</li></ul><hr><strong>Dicas de Preparo:</strong><ul><li>Remover grampos,clipes e espirais metálicas</li><li>Separar papel sulfite do papelão</li><li>Dobrar caixas grandes ao meio</li><li><strong>NÃO</strong> precisa estar seco ou limpo</li><hr>                                                                                                                                  ',
+
+                plastico: '<h4>Plástico</h4><p><strong>O que é Aceito(Sim):</strong><ul><li>Garrafas PET(água,refrigerante)</li><li>Embalagens de shampoo e detergente</li><li>Potinhos de margarina/requeijão</li><li>Sacos plásticos limpos (supermercado)</li></ul><hr><strong>O que não é aceito(Não):</strong><ul><li>Isopor (EPS) e embalagens de fast food</li><li>Plástico sujo ou com comida</li><li>CDs,DVDs e canetas</li><li>Brinquedos e utensílios plásticos</li></ul><hr><strong>Dicas de Preparo:</strong><ul><li><strong>LAVAR SEMPRE</strong> (remove resíduo de comida)</li><li>Remover tampas e rótulos</li><li>Amassar garrafas para economizar espaço</li><li>Separar por cor se possível (transparente/colorido)</li><hr>                                                                                                        ',
+
+                organico: '<h4>Orgânico</h4><p><strong>O que é Aceito(Sim):</strong><ul><li>Cascas de frutas e legumes</li><li>Restos de comida(arroz,feijão)</li><li>Folhas secas e podas de jardim</li><li>Saquetas de chá e café usado</li></ul><hr><strong>O que não é Aceito(Não):</strong><ul><li>Carne, peixe e derivados</li><li>Óleo de cozinha usado</li><li>Pão mofado</li><li>Frutas estragadas com mofo</li></ul><hr><strong>Dicas de Preparo:</strong><ul><li><strong>Corte em pedaços pequenos:</strong><li>Quanto menor os pedaços, mais rápido eles se decompõem! Corte cascas, legumes e restos de comida em tamanhos pequenos</li><strong>Retire embalagens:</strong><li>Tire todo o plástico, papel ou metal que estiver junto com o alimento. Só coloque a matéria orgânica pura!</li><strong>Evite líquidos em excesso:</strong><li> Não coloque muita água ou molhos junto, pois pode estragrar. O ideal é que esteja úmido , mais não encharcado</li><hr>                                                                                     ',
+            };
+
+            title.innerHTML = `Detalhes de Resíduo: ${tipo.toUpperCase()}`;
+            content.innerHTML = guias[tipo];
+            modal.classList.add('is-active')
+
+        }
+
+        function closeModal() {
+            document.getElementById('modalInfo').classList.remove('is-active');
+
+
+        }
+          
+
+
+
+
+
+
+    </script>
+
+
+    </div>
+
+
+
+
+
 
 </body>
 

@@ -37,3 +37,81 @@ body {
     background: #a67c52;
 }
 
+/* ========================================
+   CSS COMPLETO MODAL - CORES POR LIXEIRA
+======================================= */
+ 
+/* BASE MODAL */
+.modal-background {
+    background: rgba(0,0,0,0.75) !important;
+    backdrop-filter: blur(8px) !important;
+}
+ 
+.modal-card {
+    border-radius: 20px !important;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.3) !important;
+    max-width: 750px !important;
+    margin: 2rem auto !important;
+    overflow: hidden !important;
+}
+ 
+/* CABEÇALHO BASE */
+.modal-card-head {
+    color: white !important;
+    padding: 1.5rem 2rem !important;
+    border-bottom: none !important;
+    position: relative;
+}
+ 
+.modal-card-title {
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+}
+ 
+/* Fundo do cabeçalho (onde fica o título) */
+.modal-card-head {
+    background-color: #d8f3dc;
+    border-bottom: 1px solid #e1d8c5;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Fundo do corpo (onde aparece o texto dos guias) */
+.modal-card-body {
+    background-color:
+    color: #4a4a4a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo do rodapé (onde você colocou os botões de Maps/Waze) */
+.modal-card-foot {
+    background-color: #fdf5e6;
+    border-top: 1px solid #e1d8c5;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    justify-content: center; /* Centraliza seus botões de descarte */
+}
+
+/* Estilização extra para os títulos dentro do modal */
+#modalContent h4 {
+    color: #2f6b3f; /* Verde escuro sustentável */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Deixa as linhas separadoras (hr) mais suaves */
+.modal-card-body hr {
+    background-color: #e1d8c5;
+    height: 1px;
+}
+
+
+
+
+
+
+
+
+
+
