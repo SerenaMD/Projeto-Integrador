@@ -68,7 +68,7 @@ body {
     font-size: 1.4rem !important;
 }
  
-/* Fundo do cabeçalho (onde fica o título) */
+
 .modal-card-head {
     background-color: #d8f3dc;
     border-bottom: 1px solid #e1d8c5;
@@ -76,14 +76,14 @@ body {
     border-top-right-radius: 12px;
 }
 
-/* Fundo do corpo (onde aparece o texto dos guias) */
+
 .modal-card-body {
-    background-color:
+    background-color: #ffff;
     color: #4a4a4a;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fundo do rodapé (onde você colocou os botões de Maps/Waze) */
+
 .modal-card-foot {
     background-color: #fdf5e6;
     border-top: 1px solid #e1d8c5;
@@ -92,7 +92,6 @@ body {
     justify-content: center; /* Centraliza seus botões de descarte */
 }
 
-/* Estilização extra para os títulos dentro do modal */
 #modalContent h4 {
     color: #2f6b3f; /* Verde escuro sustentável */
     font-weight: bold;
@@ -106,12 +105,24 @@ body {
     height: 1px;
 }
 
+/*CARD PRO JS */
+.modal-card.vidro .modal-card-head {
+    background-color: #4caf50;
+    color: white;
+}
 
+.modal-card.papel .modal-card-head {
+    background-color: #2196f3;
+    color: white;
+}
 
+.modal-card.plastico .modal-card-head {
+    background-color: #f44336;
+    color: white;
+}
 
-
-
-
-
-
+.modal-card.organico .modal-card-head {
+    background-color: #795548;
+    color: white;
+}
 

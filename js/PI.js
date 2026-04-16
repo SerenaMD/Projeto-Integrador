@@ -1,24 +1,89 @@
-function openModal(tipo){
+const guias = {
+    vidro: {
+        titulo: "Vidro",
+        cor: "vidro",
+        aceito: [
+            "Frascos de perfume",
+            "Garrafas de bebidas",
+            "Potes de alimentos"
+        ],
+        naoAceito: [
+            "Espelhos",
+            "Cerâmica",
+            "Vidro laminado"
+        ]
+    },
+
+    papel: {
+        titulo: "Papel",
+        cor: "papel",
+        aceito: ["Jornais", "Papelão", "Cadernos"],
+        naoAceito: ["Papel sujo", "Papel plastificado"]
+    },
+
+    plastico: {
+        titulo: "Plástico",
+        cor: "plastico",
+        aceito: ["Garrafas PET", "Embalagens", "Sacolas"],
+        naoAceito: ["Isopor", "Plástico sujo"]
+    },
+
+    organico: {
+        titulo: "Orgânico",
+        cor: "organico",
+        aceito: ["Cascas", "Restos de comida"],
+        naoAceito: ["Óleo", "Carne"]
+    }
+};
+
+function montarConteudo(dados) {
+    return `
+        <h4>${dados.titulo}</h4>
+
+        <strong>O que é Aceito:</strong>
+        <ul>
+            ${dados.aceito.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+
+        <hr>
+
+        <strong>O que NÃO é Aceito:</strong>
+        <ul>
+            ${dados.naoAceito.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+    `;
+}
+
+
+function openModal(tipo) {
     const modal = document.getElementById('modalInfo');
     const content = document.getElementById('modalContent');
-    const title = document.getElementById('modalTitle')
+    const title = document.getElementById('modalTitle');
+    const modalCard = modal.querySelector('.modal-card');
 
-    const guias = {
-    vidro: '<h4> Vidro - Santo André</h4><p><strong> Aceita:</strong> Frascos,garrafas,potes<br><strong>Não:</strong> Espelhos,Cristal<br><strong> Pontos:</strong> 47 em Santo André</p>',
-    papel: '<h4> Papel<h4><p><strong> Aceita:</strong>Jornais,papelão<br><strong> Não:</strong> Papel Sujo<br><strong>Benefício:</strong>Salva árvores </p>',
-    plastico: '<h4> Plástico</h4><p><strong> Aceita:</strong> PET,emabalagens limpas<br><strong>Não:</strong>Isopor<br><strong> Impacto:</strong> Reduz poluição</p> ',
-   organico: '<h4> Orgânico</h4><p><strong> Aceita:</strong> Cascas,comida<br><strong> Não:</strong> Oléo, carne<br><strong> Resultado:</strong> Adubo natural</p>'
+    const dados = guias[tipo];
+    if (!dados) return;
 
-  
-    }
+    modalCard.classList.remove('vidro', 'papel', 'plastico', 'organico');
+    modalCard.classList.add(dados.cor);
 
-    title.innerHTML = 'Guia: ${tipo.toUpperCase()}; '
-    content.innerHTML = guias[tipo];
-    modal.classList.add('is-active')
+    title.innerText = `Detalhes de Resíduo: ${dados.titulo}`;
+    content.innerHTML = montarConteudo(dados);
 
+    modal.classList.add('is-active');
 }
 
-function closeModal(){
+
+function closeModal() {
     document.getElementById('modalInfo').classList.remove('is-active');
-    
 }
+
+
+document.querySelectorAll('.btn-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+        openModal(btn.dataset.tipo);
+    });
+});
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.querySelector('.modal-background').addEventListener('click', closeModal);
