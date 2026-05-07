@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +8,76 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="css/pi.css">
 </head>
- 
+
 <body>
- 
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="padding: 10px 50px;">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="PI.html">
-                <strong class="title-green" style="font-size: 1.5rem;">Logotipo</strong>
-            </a>
-        </div>
+        <div class="navbar-brand"> <a class="navbar-item" href="PI.html"> <strong class="title-green"
+                    style="font-size: 1.5rem;">Logotipo</strong> </a> </div>
         <div class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="PI.html">Início</a>
-                <a class="navbar-item" href="projeto.html" style="font-weight: bold; color: #2f6b3f;">Dicas
-                    Sustentáveis</a>
-                <a class="navbar-item" href="">Pontos de Coletas</a>
-                <a class="navbar-item" href="#">Contato</a>
-            </div>
+            <div class="navbar-end"> <a class="navbar-item" href="PI.html">Início</a> <a class="navbar-item"
+                    href="projeto.html">Dicas Sustentáveis</a> <a class="navbar-item" href="">Pontos de Coletas</a> <a
+                    class="navbar-item" href="#">Contato</a> </div>
         </div>
     </nav>
- 
-    <section class="section" style="background-color: #f3efe6; min-height: 100vh;">
-    <div class="container">
-        <h1 class="title has-text-centered title-green">Dicas Sustentáveis</h1>
-        <p class="has-text-centered">Pequenas atitudes que mudam o mundo.</p>
- 
-        <div class="columns is-centered is-multiline mt-6">
-           
-            <div class="column is-4">
-                <div class="box has-text-centered" style="border-radius: 20px; height: 100%;">
-                    <h3 class="title is-5 mt-4">Compostagem</h3>
-                    <p></p>
-                   
+    <section class="hero-custom">
+        <div class="hero-body">
+            <h1 class="title has-text-centered has-text-success">
+                Dicas Sustentáveis
+            </h1>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+
+                    <div class="box has-text-centered caixa" onclick="abrirConteudo('compostagem')">
+                        <h3 class="title is-5">
+                            Compostagem
+                        </h3>
+                        <div id="compostagem" class="conteudo">
+                            <img src="img/compostagem.png" alt="Compostagem">
+                            <p>
+                                A compostagem transforma resíduos orgânicos em adubo
+                                natural, ajudando o meio ambiente e reduzindo o lixo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4">
+                    <div class="box has-text-centered caixa" onclick="abrirConteudo('limpeza')">
+                        <h3 class="title is-5">
+                            Limpeza e Preparo
+                        </h3>
+                        <div id="limpeza" class="conteudo">
+                            <img src="img/limpeza.png" alt="Limpeza">
+
+                            <p>
+                                Utilize produtos biodegradáveis e economize água
+                                durante a limpeza dos alimentos.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column is-4">
+                    <div class="box has-text-centered caixa" onclick="abrirConteudo('reaproveitar')">
+                        <h3 class="title is-5">
+                            Reaproveitar Ideias
+                        </h3>
+                        <div id="reaproveitar" class="conteudo">
+
+                            <img src="img/reaproveitar.png" alt="Reaproveitar">
+
+                            <p>
+                                Reutilize potes, embalagens e materiais para criar
+                                novos objetos úteis no dia a dia.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
- 
-            <div class="column is-4">
-                <div class="box has-text-centered" style="border-radius: 20px; height: 100%;">
-                    <h3 class="title is-5 mt-4">Limpeza e Preparo</h3>
-                    <p> </p>
-         
-                </div>
-            </div>
- 
-            <div class="column is-4">
-                <div class="box has-text-centered" style="border-radius: 20px; height: 100%;">
-                    <h3 class="title is-5 mt-4">Reaproveitar Ideias</h3>
-                    <p></p>
-                </div>
-            </div>
- 
-        </div> <div class="has-text-centered mt-6">
-            <a href="PI.html" class="button is-success is-outlined">Voltar para o Início</a>
         </div>
-    </div>
-</section>
- 
-<script src="/js/PI.js"></script>
- 
- 
+    </section>
+
+    <script src="/js/PI.js"></script>
 </body>
- 
+
 </html>
