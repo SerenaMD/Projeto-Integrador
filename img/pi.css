@@ -1,0 +1,128 @@
+body {
+    background: #f3efe6;
+}
+
+.hero-custom {
+    background: #f3efe6;
+    padding: 3rem 1.5rem;
+}
+
+.title-green {
+    color: #2f6b3f;
+}
+
+.btn-green {
+    background: #7cc36b;
+    color: white;
+}
+
+.card-custom {
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.card-green {
+    background: #7cc36b;
+}
+
+.card-blue {
+    background: #7fa8d8;
+}
+
+.card-red {
+    background: #e57373;
+}
+
+.card-brown {
+    background: #a67c52;
+}
+
+/* ========================================
+   CSS COMPLETO MODAL - CORES POR LIXEIRA
+======================================= */
+ 
+/* BASE MODAL */
+.modal-background {
+    background: rgba(0,0,0,0.75) !important;
+    backdrop-filter: blur(8px) !important;
+}
+ 
+.modal-card {
+    border-radius: 20px !important;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.3) !important;
+    max-width: 750px !important;
+    margin: 2rem auto !important;
+    overflow: hidden !important;
+}
+ 
+/* CABEÇALHO BASE */
+.modal-card-head {
+    color: white !important;
+    padding: 1.5rem 2rem !important;
+    border-bottom: none !important;
+    position: relative;
+}
+ 
+.modal-card-title {
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+}
+ 
+
+.modal-card-head {
+    background-color: #d8f3dc;
+    border-bottom: 1px solid #e1d8c5;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+.modal-card-body {
+    background-color: #ffff;
+    color: #4a4a4a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.modal-card-foot {
+    background-color: #fdf5e6;
+    border-top: 1px solid #e1d8c5;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    justify-content: center; /* Centraliza seus botões de descarte */
+}
+
+#modalContent h4 {
+    color: #2f6b3f; /* Verde escuro sustentável */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Deixa as linhas separadoras (hr) mais suaves */
+.modal-card-body hr {
+    background-color: #e1d8c5;
+    height: 1px;
+}
+
+/*CARD PRO JS */
+.modal-card.vidro .modal-card-head {
+    background-color: #4caf50;
+    color: white;
+}
+
+.modal-card.papel .modal-card-head {
+    background-color: #2196f3;
+    color: white;
+}
+
+.modal-card.plastico .modal-card-head {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-card.organico .modal-card-head {
+    background-color: #795548;
+    color: white;
+}
+
