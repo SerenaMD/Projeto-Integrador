@@ -40,21 +40,21 @@ body {
 /* ========================================
    CSS COMPLETO MODAL - CORES POR LIXEIRA
 ======================================= */
- 
+
 /* BASE MODAL */
 .modal-background {
-    background: rgba(0,0,0,0.75) !important;
+    background: rgba(0, 0, 0, 0.75) !important;
     backdrop-filter: blur(8px) !important;
 }
- 
+
 .modal-card {
     border-radius: 20px !important;
-    box-shadow: 0 25px 80px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3) !important;
     max-width: 750px !important;
     margin: 2rem auto !important;
     overflow: hidden !important;
 }
- 
+
 /* CABEÇALHO BASE */
 .modal-card-head {
     color: white !important;
@@ -62,12 +62,12 @@ body {
     border-bottom: none !important;
     position: relative;
 }
- 
+
 .modal-card-title {
     font-weight: 700 !important;
     font-size: 1.4rem !important;
 }
- 
+
 
 .modal-card-head {
     background-color: #d8f3dc;
@@ -89,11 +89,13 @@ body {
     border-top: 1px solid #e1d8c5;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    justify-content: center; /* Centraliza seus botões de descarte */
+    justify-content: center;
+    /* Centraliza seus botões de descarte */
 }
 
 #modalContent h4 {
-    color: #2f6b3f; /* Verde escuro sustentável */
+    color: #2f6b3f;
+    /* Verde escuro sustentável */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -126,3 +128,29 @@ body {
     color: white;
 }
 
+/*parte da tela do dicas sustentáveis (efeito para abrir a div) */
+
+
+.caixa {
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.caixa:hover {
+    transform: scale(1.02);
+}
+
+.conteudo {
+    display: none;
+    margin-top: 20px;
+}
+
+.conteudo img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.ativo {
+    display: block;
+}
