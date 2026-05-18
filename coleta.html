@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Green Living</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/pi.css">
+</head>
+ 
+<body>
+ 
+    <!----MENU PRINCIPAL-->
+ 
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="padding: 10px 50px;">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong class="title-green" style="font-size: 1.5rem;">Logotipo</strong>
+            </a>
+        </div>
+ 
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="#">Início</a>
+                <a class="navbar-item" href="dicas.html">Dicas Sustentáveis</a>
+                <a class="navbar-item" href="#">Pontos de Coletas</a>
+                <a class="navbar-item" href="#">Contato</a>
+            </div>
+        </div>
+    </nav>
+ 
+    <!-- HERO -->
+    <section class="hero hero-custom">
+        <div class="hero-body">
+            <div class="columns is-vcentered">
+ 
+                <div class="column">
+                    <h1 class="title title-green">Embrace Green Living</h1>
+                    <h2 class="subtitle">Green Living</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="button btn-green">Explore Now</button>
+                </div>
+ 
+                <div class="column has-text-centered">
+                    <img src="/img/IconLixoCinza.png">
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+    <!-- CARDS -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+ 
+                <div class="column">
+                    <div class="card-custom card-green">
+                        <h3 class="title is-5">Vidro</h3>
+                        <img src="/img/iconLixoVerde.png" alt="">
+                        <button class="button is-fullwidth btn-modal" data-tipo="vidro">Saiba Mais</button>
+                    </div>
+                </div>
+ 
+                <div class="column">
+                    <div class="card-custom card-blue">
+                        <h3 class="title is-5">Papel</h3>
+                        <img src="/img/iconLixoAzul.png" alt="">
+                        <button class="button is-fullwidth btn-modal" data-tipo="papel">Saiba Mais</button>
+                    </div>
+                </div>
+ 
+                <div class="column">
+                    <div class="card-custom card-red">
+                        <h3 class="title is-5">Plástico</h3>
+                        <img src="/img/IconLixoVermelho.png" alt="">
+                        <button class="button is-fullwidth btn-modal" data-tipo="plastico">Saiba Mais</button>
+                    </div>
+                </div>
+ 
+                <div class="column">
+                    <div class="card-custom card-brown">
+                        <h3 class="title is-5">Orgânico</h3>
+                        <img src="/img/iconLixoMarrom.png" alt="">
+                        <button class="button is-fullwidth btn-modal" data-tipo="organico">Saiba Mais</button>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+    <!-- MODAL -->
+    <div id="modalInfo" class="modal">
+        <div class="modal-background"></div>
+ 
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modalTitle"></p>
+                <button class="delete" id="closeModal"></button>
+ 
+            </header>
+ 
+            <section class="modal-card-body" id="modalContent"></section>
+        </div>
+    </div>
+ 
+    <script src="js/PI.js"></script>
+</body>
+ 
+</html>
